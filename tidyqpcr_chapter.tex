@@ -1,0 +1,54 @@
+%
+% Sample SBC book chapter
+%
+% This is a public-domain file.
+%
+% Charset: ISO8859-1 (latin-1) áéíóúç
+%
+\documentclass{SBCbookchapter}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil,english]{babel}
+\usepackage{graphicx}
+\usepackage{array}
+
+\setcounter{chapter}{2}
+
+\author{Sam Haynes}
+\title{Materials and Methods}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This chapter introduces open-source software practices, community development and the pedagogy of software documentation to promote the development of long-term, high impact research software. Focusing on the issue of the standardisation of qPCR analysis, the chapter contrasts the R package tidyqpcr, developed by the author, to other current software available. This use case highlights how quality software supported by comprehensive documentation can improve the quality of the entire experimental assay.
+
+
+\end{abstract}
+
+\section{Research Software}
+
+\subsection{Software development practices}
+
+\subsubsection{Computation and the environment}
+
+\subsection{GUIs or CLIs}
+
+\begin{itemize}
+    \item Since the macintosh there has been a continued shift between GUI and CLI statistical software taking the lead. 
+    \item GUIs tend to be associated a dramatically lower learning curve but larger development and maintenance costs.
+    \item Better user experience in a quality GUI than CLI, however do GUI developers prioritise ease of use over quality of analysis by ignoring key steps (such as quality control).
+    \item GUIs are also limited by the number of ways a user can interact with the screen (interactive operations), drop down boxes quickly become unwieldy if they list every possible action to take on an object. 
+    \item CLIs are often quicker to develop (so can include the latest statistical methods), easier to scale to larger work loads, better reproducibility and cheaper to maintain.
+    \item Without a unified framework to conduct statistical analysis (how you define models and manipulate data) there cannot be an intuitive structure to create and expand a GUI.
+
+\end{itemize}
+
+\section{Software documentation}
+
+\subsection{Why is research software documentation important}
+
+\bibliographystyle{apalike}
+\bibliography{sbc-template}
+
+\end{document}
