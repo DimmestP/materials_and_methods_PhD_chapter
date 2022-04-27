@@ -26,27 +26,18 @@ This chapter introduces open-source software practices, community development an
 
 \end{abstract}
 
-\section{Research Software}
+\section{Software Development}
 
-\subsection{Software development practices}
+\section{RNA-seq Analysis Pipelines}
 
-\subsubsection{Computation and the environment}
+\section{Linear Regression}
 
-\subsection{GUIs or CLIs}
+\section{Gaussian Processes}
+Gaussian processes are a Bayesian method developed for analysing time series data. Time series data is structured differently to other continuous data types as it often has strong autocorrelation between neighbouring points and repeating cycles. Standard linear regression models often struggle to model this behaviour (although circular patterns can be learnt from finite linear combination of sin/cos functions). They are the projection of Gaussian distribution into infinite dimensions. By defining the covariance function, which relates the value of each point to every other point, can a various attributes to the fitted model. For example, if the fitted line must be continuous and differentiable then the covariance functions must be similarly defined. Similar to a finite multi-dimensional Gaussian it is fully defined by two parameters:  the mean function and the covariance function. As it is a Bayesian method it also create an error at in the expected value at any point. The covariance function defines how smooth the function mapping neighboring points are. You can use a number of well characterised functions as the covariance function or you can use a neural network to learn complex connections. 
 
-\begin{itemize}
-    \item Since the macintosh there has been a continued shift between GUI and CLI statistical software taking the lead. 
-    \item GUIs tend to be associated a dramatically lower learning curve but larger development and maintenance costs.
-    \item Better user experience in a quality GUI than CLI, however do GUI developers prioritise ease of use over quality of analysis by ignoring key steps (such as quality control).
-    \item GUIs are also limited by the number of ways a user can interact with the screen (interactive operations), drop down boxes quickly become unwieldy if they list every possible action to take on an object. 
-    \item CLIs are often quicker to develop (so can include the latest statistical methods), easier to scale to larger work loads, better reproducibility and cheaper to maintain.
-    \item Without a unified framework to conduct statistical analysis (how you define models and manipulate data) there cannot be an intuitive structure to create and expand a GUI.
+The omniplate python package developed by the Swain lab uses a Gaussian process with an infinitely differentiable covariance functions. The enables the time series protein florescence data to be model, then doubly differentiated to find the point of max increase in florescence. It is important to use a similar time point to compare all the different constructs at and the time of max growth rate is appropriate. Partly because it is simple to calculate whilst making sure all the constructs are being compared at a similar point in the growth cycle (mid exponential). It also important to account for auto-fluorescence and the size of cells in various media in order to remove confounding contributions to sample fluorescence.
 
-\end{itemize}
-
-\section{Software documentation}
-
-\subsection{Why is research software documentation important}
+\section{Bayesian Statistical Models}
 
 \bibliographystyle{apalike}
 \bibliography{sbc-template}
