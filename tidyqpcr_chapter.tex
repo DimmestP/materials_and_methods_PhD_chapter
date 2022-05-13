@@ -32,6 +32,26 @@ The open software development strategies developed by the mozzula open leaders p
 \subsection{User interviews}
 We explored how users interact with tidyqpcr by conducting 7 semi-structured, exploratory interviews. These interviews where conducted over zoom with the video recorded and transcripts created by zoom's proprietary software over a period between 45 and 90 minutes. Software developers are often unaware of their own unconscious knowledge which may create a barrier for users to engage with user. Also, language differences between disciplines and non-native speakers can create obstacles.  The interview, outline in appendix A, was in two halfs: part one explored the users experience with qPCR assay, analysis and coding, part two consisted of a series of tasks based on the vignettes. The interviewees consisted of member of the lab who are known to have conducted qPCR previously or are intending to conduct research in the near future as well as other academic colleagues known for conducted qPCR experiments. The questionnaire section explored whether users were aware of the MIQE-guideline and if they currently executed any QC measures. We also wanted to know the typical experiments users wanted to conduct: qPCR assay, machine, No of wells. Finally, we wanted to explore what software users currently used to analyse their results and if they were interested in learning R based analysis. The task-based section of the interview focused on three main themes of tidyqpcr: block based plate planning, tidyverse based API and conducting reproducible analysis.
 
+\begin{center}
+\begin{tabular}{|| m{4cm} | m{4.4cm} | m{4.5cm} ||} 
+ \hline
+ \textbf{\large Position} & \textbf{\large Coding Experience} & \textbf{\large qPCR Experience} \\ [0.5ex] 
+ \hline
+ Undergraduate student & Novice Python user & No prior experience\\ 
+ \hline
+ Senior post-doctoral research assistant. & Intermediate R user & Conducting qPCR for >10 years \\
+ \hline
+ Research assistant & Intermediate R user & Conducted 1000's of qPCR experiments\\
+ \hline
+ PhD student & Confident R user & Conducted several qPCR experiments \\
+ \hline
+ PhD student & Novice R user & Conducted several qPCR experiments\\
+ \hline
+ PhD student & Intermediate Python user & Conducted several qPCR experiments\\
+ \hline
+\end{tabular}
+\end{center}
+
 User interviews for tidyqpcr were conducted and recorded using zoom. The audio was then transcribed using otter.io rather than the default zoom transcriber as otter.io allows you to introduce specialist vocabulary (such as tidyqpcr, taqman, ect) to aid accuracy. Once the transcripts were available they were split into two halves: the semi-structured interview and the user task. The semi-structured interview and the user task sections were combined for all the user interviews. Each combined section was then analysed separately to create two text clouds.  The text mining R packages tm and pluralize were used to preprocess the transcripts and extract frequently used words. The text was pre-processed by removing whitespace, numbers and common words; converting all plural nouns to singular; and changing all letters to lower case. The frequency of each word was then counted and any generic words  regularly occurring within the transcript were removed; for example that, like and thing. Finally, the word frequency matrix was used to create the text cloud with the R package wordcloud.
 
 \section{RNA-seq Analysis Pipelines}
